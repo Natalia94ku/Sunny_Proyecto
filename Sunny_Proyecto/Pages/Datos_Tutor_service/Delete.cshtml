@@ -1,0 +1,70 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Tutor_service.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Borrar</h1>
+
+<h3>¿Quieres borrar esto?</h3>
+<div>
+    <h4>Datos_Tutor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Nombre_tutor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Nombre_tutor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Apellido_Paterno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Apellido_Paterno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Apellido_Materno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Apellido_Materno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Fecha_Nacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Fecha_Nacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Nacionalidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Nacionalidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Ocupacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Ocupacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Ingreso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Ingreso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Tutor.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Tutor.Telefono)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Datos_Tutor.Id" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-page="./Index">Volver a la lista</a>
+    </form>
+</div>

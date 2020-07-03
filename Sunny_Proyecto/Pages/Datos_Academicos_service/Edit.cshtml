@@ -1,0 +1,60 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Academicos_service.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Datos_Academicos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Datos_Academicos.Id" />
+            <div class="form-group">
+                <label asp-for="Datos_Academicos.Escuela" class="control-label">Escuela</label>
+                <input asp-for="Datos_Academicos.Escuela" class="form-control" />
+                <span asp-validation-for="Datos_Academicos.Escuela" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Academicos.Nivel_escolar" class="control-label">Nivel escolar</label>
+                <input asp-for="Datos_Academicos.Nivel_escolar" class="form-control" />
+                <span asp-validation-for="Datos_Academicos.Nivel_escolar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Academicos.Direccion" class="control-label">Direccion</label>
+                <input asp-for="Datos_Academicos.Direccion" class="form-control" />
+                <span asp-validation-for="Datos_Academicos.Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Academicos.Matricula" class="control-label">Matricula</label>
+                <input asp-for="Datos_Academicos.Matricula" class="form-control" />
+                <span asp-validation-for="Datos_Academicos.Matricula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Academicos.Carrera" class="control-label">Carrera</label>
+                <input asp-for="Datos_Academicos.Carrera" class="form-control" />
+                <span asp-validation-for="Datos_Academicos.Carrera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Academicos.Cuatrimestre" class="control-label">Cuatrimestre</label>
+                <input asp-for="Datos_Academicos.Cuatrimestre" class="form-control" />
+                <span asp-validation-for="Datos_Academicos.Cuatrimestre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Volver a la lisya</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

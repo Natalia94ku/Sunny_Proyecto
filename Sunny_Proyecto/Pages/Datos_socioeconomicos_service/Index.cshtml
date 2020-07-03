@@ -1,0 +1,72 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_socioeconomicos_service.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Socioeconomico</h1>
+
+<p>
+    <a asp-page="Create">Crear Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Ingresos_Mensuales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Gastos_Alimentos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Gastos_Escolaridad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Gastos_Servicios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Gastos_Transportes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Pago_Vivienda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_socioeconomicos[0].Otros)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Datos_socioeconomicos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingresos_Mensuales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gastos_Alimentos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gastos_Escolaridad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gastos_Servicios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gastos_Transportes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pago_Vivienda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otros)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,91 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Alumnos_service.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Datos Alumnos</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Apellido_paterno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Apellido_paterno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Apellido_materno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Apellido_materno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.curp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.curp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Nacionalidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Nacionalidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Fecha_nacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Fecha_nacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Discapacidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Discapacidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Telefono)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Colonia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Colonia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Alumnos.correo_tutor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Alumnos.correo_tutor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Datos_Alumnos.Id">Editar</a> |
+    <a asp-page="./Index">volver a la lista</a>
+</div>

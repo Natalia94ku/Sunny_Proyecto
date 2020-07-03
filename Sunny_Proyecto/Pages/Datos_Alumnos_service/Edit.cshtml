@@ -1,0 +1,90 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Alumnos_service.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Datos Alumnos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Datos_Alumnos.Id" />
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Nombre" class="control-label">Nombre</label>
+                <input asp-for="Datos_Alumnos.Nombre" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Apellido_paterno" class="control-label">Apellido paterno</label>
+                <input asp-for="Datos_Alumnos.Apellido_paterno" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Apellido_paterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Apellido_materno" class="control-label">Apellido materno</label>
+                <input asp-for="Datos_Alumnos.Apellido_materno" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Apellido_materno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.curp" class="control-label">curp</label>
+                <input asp-for="Datos_Alumnos.curp" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.curp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Nacionalidad" class="control-label">Nacionalidad</label>
+                <input asp-for="Datos_Alumnos.Nacionalidad" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Nacionalidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Fecha_nacimiento" class="control-label">Fecha de nacimiento</label>
+                <input asp-for="Datos_Alumnos.Fecha_nacimiento" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Fecha_nacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Genero" class="control-label">Genero</label>
+                <input asp-for="Datos_Alumnos.Genero" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Discapacidad" class="control-label">Discapacidad</label>
+                <input asp-for="Datos_Alumnos.Discapacidad" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Discapacidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Telefono" class="control-label">Telefono</label>
+                <input asp-for="Datos_Alumnos.Telefono" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Colonia" class="control-label">Colonia</label>
+                <input asp-for="Datos_Alumnos.Colonia" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Colonia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.Direccion" class="control-label">Direccion</label>
+                <input asp-for="Datos_Alumnos.Direccion" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_Alumnos.correo_tutor" class="control-label">correo del tutor</label>
+                <input asp-for="Datos_Alumnos.correo_tutor" class="form-control" />
+                <span asp-validation-for="Datos_Alumnos.correo_tutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

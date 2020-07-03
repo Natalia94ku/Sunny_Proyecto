@@ -1,0 +1,102 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Alumnos_service.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Datos Del Alumno</h1>
+
+<p>
+    <a asp-page="Create">Crear Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Apellido_paterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Apellido_materno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].curp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Nacionalidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Fecha_nacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Discapacidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Colonia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Alumnos[0].correo_tutor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Datos_Alumnos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_paterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_materno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.curp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_nacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discapacidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colonia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.correo_tutor)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

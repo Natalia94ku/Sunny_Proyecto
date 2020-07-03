@@ -1,0 +1,64 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_socioeconomicos_service.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear</h1>
+
+<h4>Datos socioeconomicos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Ingresos_Mensuales" class="control-label">Ingresos Mensuales</label>
+                <input asp-for="Datos_socioeconomicos.Ingresos_Mensuales" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Ingresos_Mensuales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Gastos_Alimentos" class="control-label">Gastos Alimentos</label>
+                <input asp-for="Datos_socioeconomicos.Gastos_Alimentos" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Gastos_Alimentos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Gastos_Escolaridad" class="control-label">Gastos Escolaridad</label>
+                <input asp-for="Datos_socioeconomicos.Gastos_Escolaridad" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Gastos_Escolaridad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Gastos_Servicios" class="control-label">Gastos Servicios</label>
+                <input asp-for="Datos_socioeconomicos.Gastos_Servicios" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Gastos_Servicios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Gastos_Transportes" class="control-label">Gastos Transportes</label>
+                <input asp-for="Datos_socioeconomicos.Gastos_Transportes" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Gastos_Transportes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Pago_Vivienda" class="control-label">Pago Vivienda</label>
+                <input asp-for="Datos_socioeconomicos.Pago_Vivienda" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Pago_Vivienda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datos_socioeconomicos.Otros" class="control-label">Otros</label>
+                <input asp-for="Datos_socioeconomicos.Otros" class="form-control" />
+                <span asp-validation-for="Datos_socioeconomicos.Otros" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

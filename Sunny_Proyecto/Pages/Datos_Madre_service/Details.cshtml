@@ -1,0 +1,91 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Madre_service.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Datos de la Madre</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Nombre_Madre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Nombre_Madre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Apellido_Paterno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Apellido_Paterno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Apellido_Materno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Apellido_Materno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Fecha_Nacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Fecha_Nacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Nacionalidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Nacionalidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Ocupacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Ocupacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Telefono)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Domicilio_padres)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Domicilio_padres)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Municipio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Municipio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Colonia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Colonia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Comunidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Comunidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Madre.Estado_civil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Madre.Estado_civil)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Datos_Madre.Id">Editar</a> |
+    <a asp-page="./Index">volver a la lista</a>
+</div>

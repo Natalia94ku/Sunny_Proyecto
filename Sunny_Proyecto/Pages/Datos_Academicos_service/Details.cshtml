@@ -1,0 +1,55 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Academicos_service.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Datos Academicos</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Academicos.Escuela)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Academicos.Escuela)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Academicos.Nivel_escolar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Academicos.Nivel_escolar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Academicos.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Academicos.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Academicos.Matricula)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Academicos.Matricula)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Academicos.Carrera)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Academicos.Carrera)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos_Academicos.Cuatrimestre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datos_Academicos.Cuatrimestre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Datos_Academicos.Id">Editar</a> |
+    <a asp-page="./Index">Volver a la lista</a>
+</div>

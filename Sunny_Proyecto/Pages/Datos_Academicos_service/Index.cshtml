@@ -1,0 +1,66 @@
+﻿@page
+@model Sunny_Proyecto.Pages.Datos_Academicos_service.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Datos Academicos</h1>
+
+<p>
+    <a asp-page="Crear">Crear Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Academicos[0].Escuela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Academicos[0].Nivel_escolar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Academicos[0].Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Academicos[0].Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Academicos[0].Carrera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datos_Academicos[0].Cuatrimestre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Datos_Academicos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Escuela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel_escolar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carrera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cuatrimestre)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editor</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
